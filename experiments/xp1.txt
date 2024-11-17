@@ -73,4 +73,188 @@ True
 SyntaxError: invalid syntax
 >>> print((not not "" ))
 False
+>>> print(('a' and "a" ))
+a
+>>> print(('a' and "a" )) print(type('a' and "a"))
+  File "<stdin>", line 1
+    print(('a' and "a" )) print(type('a' and "a"))
+                          ^^^^^
+SyntaxError: invalid syntax
+>>> print(('a' and "a" )) print(typeof('a' and "a"))
+  File "<stdin>", line 1
+    print(('a' and "a" )) print(typeof('a' and "a"))
+                          ^^^^^
+SyntaxError: invalid syntax
+>>> print(int('a' and "a" ))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'a'
+>>> print(int(int.'a' and int."a" ))
+  File "<stdin>", line 1
+    print(int(int.'a' and int."a" ))
+                  ^^^
+SyntaxError: invalid syntax
+>>> print((int.'a' and int."a" ))
+  File "<stdin>", line 1
+    print((int.'a' and int."a" ))
+               ^^^
+SyntaxError: invalid syntax
+>>> print(int('a') and int("a") ))
+  File "<stdin>", line 1
+    print(int('a') and int("a") ))
+                                 ^
+SyntaxError: unmatched ')'
+>>> print(int('a') and int("a") )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'a'
+>>> print(int('a') ,int("a"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'a'
+>>> print(ocr('a') ,int("a"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ocr' is not defined. Did you mean: 'oct'?
+>>> print(otd('a') ,int("a"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'otd' is not defined. Did you mean: 'ord'?
+>>> print(ord('a') ,int("a"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'a'
+>>> print(ord('a') ,ord("a"))
+97 97
+>>> (print(('a' and "a" )) and  print(typeof('a' and "a")))
+a
+>>>   print(typeof('a' and "a"))
+  File "<stdin>", line 1
+    print(typeof('a' and "a"))
+IndentationError: unexpected indent
+>>> print(typeof('a' and "a"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'typeof' is not defined. Did you mean: 'type'?
+>>> print(type('a' and "a"))
+<class 'str'>
+>>> (print(('a' and "a" )) and print(type('a' and "a")))
+a
+>>> ( and print(type('a' and "a")))
+  File "<stdin>", line 1
+    ( and print(type('a' and "a")))
+      ^^^
+SyntaxError: invalid syntax
+>>> ( print(type('a' and "a")))
+<class 'str'>
+>>>  ( print(type('a' and "a")))
+  File "<stdin>", line 1
+    ( print(type('a' and "a")))
+IndentationError: unexpected indent
+>>> (print(('a' and "a" )) and print(type('b' and "a")))
+a
+>>> (print(('a' and "a" )) and print(type('b' and "b")))
+a
+>>> (print(('a' and "a" ))  print(type('b' and "b")))
+  File "<stdin>", line 1
+    (print(('a' and "a" ))  print(type('b' and "b")))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> (print(('a' and "a" ))  print(type('b' and "b")))
+  File "<stdin>", line 1
+    (print(('a' and "a" ))  print(type('b' and "b")))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
 >>>
+>>>
+>>>
+>>>
+>>> `
+  File "<stdin>", line 1
+    `
+    ^
+SyntaxError: invalid syntax
+>>> `
+  File "<stdin>", line 1
+    `
+    ^
+SyntaxError: invalid syntax
+>>>
+>>> `
+  File "<stdin>", line 1
+    `
+    ^
+SyntaxError: invalid syntax
+>>> '
+  File "<stdin>", line 1
+    '
+    ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> /
+  File "<stdin>", line 1
+    /
+    ^
+SyntaxError: invalid syntax
+>>> (print(('a' and "a" ))  print(type('b' and "b")))
+  File "<stdin>", line 1
+    (print(('a' and "a" ))  print(type('b' and "b")))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> (print(('a' and "a" ))  print(type('b' and "b")))`
+  File "<stdin>", line 1
+    (print(('a' and "a" ))  print(type('b' and "b")))`
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> (print(('a' and "a" ))  print(type('b' and "b")))`"
+  File "<stdin>", line 1
+    (print(('a' and "a" ))  print(type('b' and "b")))`"
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> (print(('a' and "a" ))  print(type('b' and "b")))`"
+  File "<stdin>", line 1
+    (print(('a' and "a" ))  print(type('b' and "b")))`"
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>>
+>>>
+>>> P=10
+>>> id(P)
+140733420669656
+>>> P+=10
+>>> id(P)
+140733420669976
+>>> id(10)
+140733420669656
+>>> id(P=10)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: id() takes no keyword arguments
+>>> P=10
+>>> id(P)
+140733420669656
+>>> p=[12,76,78,68,57,68]
+>>> id(p)
+1432722149952
+>>> id(p)
+KeyboardInterrupt
+>>> p[1]=12112
+>>> id(p)
+1432722149952
+>>> p='435rutiuyeff'
+>>> p[12]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+>>> print(p[12])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+>>> print(p[10])
+f
+>>> p[10]=13
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'str' object does not support item assignment
+>>> p[10]='13'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>

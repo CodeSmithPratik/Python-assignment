@@ -1,0 +1,4 @@
+look at everything as object
+foe mut and non mut consider them (int )AS MEM OCCP BY IT as bytes,u cannot change the bytes structure within that index pace snig operations,but when u do oprns it gets copied and created as new obj x=somewhere else ,but list byte level struct can be modified
+okkkk
+
