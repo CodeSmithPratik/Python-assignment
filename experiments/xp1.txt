@@ -1,0 +1,76 @@
+Python 3.12.6 (tags/v3.12.6:a4a2d2b, Sep  6 2024, 20:11:23) [MSC v.1940 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> print(int(0x10101 and 0x100101))
+1048833
+>>> print(int(0x10101 & 0x100101))
+257
+>>> print(int(0x10101 , 0x100101))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: int() base must be >= 2 and <= 36, or 0
+>>> print(int(0x10101),int(  0x100101))
+65793 1048833
+>>> print(int(0x10101 or 0x100101))
+65793
+>>> print(int(0x10101 not 0x100101))
+  File "<stdin>", line 1
+    print(int(0x10101 not 0x100101))
+              ^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+>>> print(int( not 0x100101))
+0
+>>> print(int( not 0x0))
+1
+>>> print(int( not 0x10))
+0
+>>> print(int( not 110))
+0
+>>> print(int( not 0))
+1
+>>> null
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'null' is not defined
+>>> print(int(null))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'null' is not defined
+>>> print(int(:null"))
+  File "<stdin>", line 1
+    print(int(:null"))
+              ^
+SyntaxError: invalid syntax
+>>> print(int("null"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'null'
+>>> print(int("null"))
+KeyboardInterrupt
+>>> print(int('a' &  'A'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for &: 'str' and 'str'
+>>> print(int('a' &  'A'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for &: 'str' and 'str'
+>>> print(int('a' and 'A'))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'A'
+>>> print(('a' and 'A'))
+A
+>>> print(('a' or 'A'))
+a
+>>> print((not 'A'))
+False
+>>> print((not not 'A'))
+True
+>>> print((not not ))
+  File "<stdin>", line 1
+    print((not not ))
+                   ^
+SyntaxError: invalid syntax
+>>> print((not not "" ))
+False
+>>>
